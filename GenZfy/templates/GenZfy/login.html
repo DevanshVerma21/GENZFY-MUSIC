@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,44 +6,76 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GenZfy-Login</title>
-    <link rel="stylesheet" href="login.css">
-    <link rel="icon" type="image/jpeg" href="favicon-removebg.png">
+    <link rel="stylesheet" href="{% static 'GenZfy/css/login1.css' %}">
+    <link rel="stylesheet" href="{% static 'GenZfy/css/navbar.css' %}">
+    <link rel="icon" type="image/jpeg" href="{% static 'GenZfy/images/favicon-removebg.png' %}">
     <script src="https://kit.fontawesome.com/97ebdf5864.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="navbar" id="navbar">
-        <img src="favicon-removebg.png" class="logo">
-        <ul>
-            <li><a href="index.html"> HOME </a></li>    
-            <li><a href="artists.html"> ARTISTS</a></li>    
-            <li><a href="playlist.html"> PLAYLIST </a></li>    
-            <li><a href="contactus.html"> CONTACT US </a></li>    
-            <li id="auth-link"><a href="login.html"> LOGIN </a></li>    
-        </ul>
-    </div>
-
+        <img src="{% static 'GenZfy/images/favicon-removebg.png' %}" class="logo">
+      <ul>
+        <li><a href="{% url 'welcome' %}"> HOME </a></li>
+        <li><a href="{% url 'artists' %}">ARTISTS</a></li>
+        <li><a href="{% url 'playlist' %}"> PLAYLIST </a></li>    
+        <li><a href="{% url 'contact' %}"> CONTACT US </a></li>    
+        <li>{% if request.session.user_id %}
+          <div class="dropdown">
+            <button class="dropbtn" onclick="toggleUserDropdown()">
+              <img src="{% static 'GenZfy/images/icon.png' %}" alt="User Icon" class="user-icon">
+            </button>
+            <div class="dropdown-content" id="userDropdown">
+              <div class="welcome-message">
+                <p>Welcome,</p>
+                <p class="dropdown-username">{{ request.session.username }}</p>
+              </div>
+              <a href="{% url 'logout' %}" style="text-align: center;">Logout</a>
+            </div>
+          </div>
+          {% else %}
+          <a href="{% url 'login' %}">LOGIN</a>
+          {% endif %}
+        </li>
+      </ul>
+      </div>
+      {% if messages %}
+      <div class="messages-container">
+      {% for message in messages %}
+      <div class="alert {% if message.tags %}alert-{{ message.tags }}{% endif %}">
+      {{ message }}
+      <span class="close-btn" onclick="this.parentElement.style.display='none';">&times;</span>
+      </div>
+      {% endfor %}
+      </div>
+      {% endif %}
 
     <div class="outer">
         <div class="box">
-            <form id="loginForm">
+            <form method="POST" action="{% url 'login' %}" id="loginForm">
+                {% csrf_token %}
                 <div class="form-group">
-                    <input type="email" id="email" required>
-                    <label for="">Email</label>
+                    <input type="text" name="username" id="username" required>
+                    <label for="username">Email or Username</label>
                     <i class="fa-solid fa-envelope"></i>
                 </div>
                 <div class="form-group">
-                    <input type="password" id="password" required>
-                    <label for="">Password</label>
+                    <input type="password" name="password" id="password" required onmouseover="this.type='text'" onmouseout="this.type='password'">
+                    <label for="password">Password</label>
                     <i class="fa-solid fa-lock"></i>
-                </div><br>
+                </div>
                 <input id="btn" type="submit" value="Login">
-                <br>
-                <p>Don't have an account? <a href="signup.html">Register</a></p>
+                <p>Don't have an account? <a href="{% url 'signup' %}">Register</a></p>
             </form>
-        </div>
-    </div>
-
-    <script src ='login.js'></script>
-    <script src = 'scroptwelcome.js'></script>
+                </div>
+            </div>
+            {% if login_success %}
+    <script>
+        setTimeout(function() {
+        window.location.href = "{{ redirect_url }}";
+        }, 1000);
+    </script>
+{% endif %}
+        <script src ="{% static 'GenZfy/js/welcome.js' %}"></script>
+        <script src ="{% static 'GenZfy/js/navbar.js' %}"></script>
 </body>
 </html>
