@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/jpeg" href="favicon-removebg.png">
+    <title>Sidhu Moosewala</title>
+<style>
+    *{
+            background-color: black;
+        }
+        body {
+            background-color: black;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #0000;
+            color: white;
+            overflow-x: hidden;
+        }
+        header {
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            overflow: hidden;
+            background-color: black;
+        }
+        .about-text {
+            margin-top: 20px;
+            font-size: 1.2em;
+            line-height: 1.6;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .bio {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+        .bio img {
+            width: 300px;
+            height: auto;
+            border-radius: 10px;
+            margin-right: 20px;
+        }
+        .bio div {
+            flex: 1;
+            margin-left: 20px;
+        }
+        h2 {
+            color: white;
+        }
+
+        .navbar{
+    width: 99%;
+    margin:auto ;
+    padding: 3px 10px;
+    display: flex;
+    align-items: right;
+    justify-content: space-between;
+    position: relative;
+    background-color: #000000;
+}
+
+.logo {
+width: 120px;
+cursor: pointer;
+}
+.navbar ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+.navbar ul li {
+    list-style:none;
+    display: inline-block;
+    margin: 25px 6px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+.content {
+    width: 100%;
+    position: absolute;
+    top: 20%;
+}
+.left-col{
+    margin-left: 6%;
+}
+.left-col h1{
+    font-size: 80px ;
+    color: fff;
+    line-height: 110px;
+    float: left;
+}
+.right-col {
+    margin-right: 7%;
+    margin-top: 70px;
+    float:right;
+    display:flex;
+    align-items: center;
+}
+.right-col p{
+font-size: 45px;
+color: #fff;
+font-weight: 700;
+line-height: 60px;
+/* margin-right: 0%; */
+}
+.gldgen{
+  color:rgb(255, 255, 255);
+  text-shadow: 0 0 5px #ffd700, 0 0 10px #ffcc00;
+}
+
+#welcome-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #342828;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    z-index: 9999;
+    opacity: 1;
+    animation: fadeOut 2s forwards;
+    transition: bottom 2s ease; 
+}
+
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+  }
+  .dropbtn{
+    color: white;
+  }
+  
+  .dropdown .dropbtn {
+    cursor: pointer;
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: black;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+  }
+  
+  .navbar a,
+  .dropbtn {
+    position: relative;
+    color: white;
+    background: none;
+    border: none;
+    font-size: 15px;
+    font-family: Poppins;
+    cursor: pointer;
+    padding: 8px 12px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  /* Underline animation */
+  .navbar a::after,
+  .dropbtn::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    background-color: white;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+  }
+  
+  .navbar a:hover::after,
+  .dropbtn:hover::after {
+    transform: scaleX(1);
+  }
+  
+
+  .dropbtn:focus {
+    color: #000000;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute; /*absoukte */
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(255, 0, 93, 0);
+    z-index: 1;
+    max-height: 120px; /* Maximum height for the dropdown */
+  overflow-y: auto;
+  }
+  
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: black;
+  }
+  
+  .show {
+    display: block;
+  }
+</style>
+</head>
+<body>
+    <body>
+        <div class="conatiner">
+            <div class="navbar">
+                    <img src="favicon-removebg.png" class="logo">
+                <ul>
+                    <li><a href="welcome.html"> HOME </a></li>    
+                    <li><div class="dropdown">
+                        <button class="dropbtn" onclick="myFunction()" style="color: white;font-family: 'Poppins';font-size: 18px;"> ARTISTS
+                          <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-content" id="myDropdown">
+                          <a href="whothey.html">KARAN AUJLA</a>
+                          <a href="295.html">SIDHU MOOSEWALA</a>
+                          <a href="baarishein.html">ANUV JAIN</a>
+                          <a href="Ae dil hai mushkil.html">ARIJIT SINGH</a>
+                          <a href="Steal my girl.html">ONE DIRECTION</a>
+                          <a href="gods plan.html">DRAKE</a>
+                        </div>
+                        </div></li>    
+                    <li><a href="playlist.html"> PLAYLIST </a></li>    
+                    <li><a href="contactus.html"> CONTACT US </a></li>    
+                    <li><a href="login.html"> LOGIN</a></li>    
+                </ul>
+            </nav>
+            </div>
+    
+    <header>
+        <h1><span class="gldgen">SIDHU&nbsp;MOOSEWALA</span></h1>
+    </header>
+
+    <div class="container">
+        <section class="bio">
+            <!-- Image of Sidhu Moosewala -->
+            <img src="https://th.bing.com/th/id/OIP.YIbRmYnVhYpc6YHTKmf6zQHaHa?w=185&h=186&c=7&r=0&o=5&dpr=1.5&pid=1.7" alt="Sidhu Moosewala">
+            
+            <div class="about-text">
+                <h2>Biography</h2>
+                <p><strong>Sidhu Moosewala</strong>, born as Shubhdeep Singh Sidhu on June 11, 1993, in the village of Moosa, Mansa district, Punjab, India, was a renowned Indian singer, rapper, and lyricist. He was known for his unique fusion of Punjabi music and hip hop, which gained him millions of fans worldwide.</p>
+                
+                <p>Sidhu's musical career began with his debut track "<strong>License</a></strong>" in 2017, which became an instant hit. He continued to rise to prominence with songs like "<strong><a href=""></a>Just Listen</strong>", "<strong><a href=""></a>Dollar</strong>", and "<strong><a href=""></a>Bad Fellow</strong>". Known for his deep voice, bold lyrics, and a distinct style, Moosewala became an iconic figure in the Punjabi music industry.</p>
+                
+                <p>Sidhu's music often reflected themes of empowerment, struggle, and pride, connecting deeply with youth around the world. His songs became anthems for fans of Punjabi music, and his influence transcended borders, reaching listeners from various backgrounds.</p>
+
+                <p>Some of the popular tracks of Sidhu are "<strong><a href="295.html">295</a></strong>" , "<strong><a href="samebeef.html">Same Beef</a></strong>" , "<strong><a href="sanju.html">Sanju</a></strong>" </p>
+                
+                <p>In addition to his music, Sidhu Moosewala's legacy includes his involvement in politics, with his father being a member of the Punjab legislative assembly. Despite facing controversy, Moosewala remained steadfast in his pursuit of creative expression and was widely admired for his boldness and authenticity.</p>
+
+                <p>Tragically, Sidhu Moosewala passed away on May 29, 2022, in a shooting incident that shocked the world. However, his music continues to inspire and resonate with people globally, cementing his place as one of the greatest figures in modern Punjabi music.</p>
+            </div>
+        </section>
+    </div>
+</body>
+<script>
+    // Add scroll animation to elements when they come into view
+    window.addEventListener('scroll', function() {
+        const elements = document.querySelectorAll('.fade-in');
+        elements.forEach(function(element) {
+            if (element.getBoundingClientRect().top < window.innerHeight - 100) {
+                element.classList.add('fade-in-visible');
+            }
+        });
+    });
+
+    // Trigger the initial scroll animations
+    window.dispatchEvent(new Event('scroll'));
+    setTimeout(function() {
+document.getElementById('welcome-screen').style.display = 'none';
+}, 1000);
+function myFunction() {
+document.getElementById("myDropdown").classList.toggle("show");
+}  window.onclick = function(e) {
+if (!e.target.matches('.dropbtn')) {
+var myDropdown = document.getElementById("myDropdown");
+  if (myDropdown.classList.contains('show')) {
+    myDropdown.classList.remove('show');
+  }
+}
+}
+</script>
+</html>
+
