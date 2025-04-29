@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GenZfy-Login</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="icon" type="image/jpeg" href="favicon-removebg.png">
+    <script src="https://kit.fontawesome.com/97ebdf5864.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="navbar" id="navbar">
+        <img src="favicon-removebg.png" class="logo">
+        <ul>
+            <li><a href="index.html"> HOME </a></li>    
+            <li><a href="artists.html"> ARTISTS</a></li>    
+            <li><a href="playlist.html"> PLAYLIST </a></li>    
+            <li><a href="contactus.html"> CONTACT US </a></li>    
+            <li id="auth-link"><a href="login.html"> LOGIN </a></li>    
+        </ul>
+    </div>
+
+
+    <div class="outer">
+        <div class="box">
+            <form id="loginForm">
+                <div class="form-group">
+                    <input type="email" id="email" required>
+                    <label for="">Email</label>
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div class="form-group">
+                    <input type="password" id="password" required>
+                    <label for="">Password</label>
+                    <i class="fa-solid fa-lock"></i>
+                </div><br>
+                <input id="btn" type="submit" value="Login">
+                <br>
+                <p>Don't have an account? <a href="signup.html">Register</a></p>
+            </form>
+        </div>
+    </div>
+
+    <script src ='login.js'></script>
+    <script src = 'scroptwelcome.js'></script>
+</body>
+</html>
