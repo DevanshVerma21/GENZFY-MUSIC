@@ -75,7 +75,7 @@ body {
 /* Underline animation */
 
 /* 2. */
-/* .navbar a::after,
+.navbar a::after,
 .dropbtn::after {
   content: '';
   position: absolute;
@@ -100,7 +100,7 @@ body {
 .gldgen{
   color:rgb(255, 255, 255);
   text-shadow: 0 0 5px #ffd000, 0 0 10px #ffcc00; 
-} */
+}
 
 
 
