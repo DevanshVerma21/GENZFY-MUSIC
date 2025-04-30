@@ -17,9 +17,9 @@ document.getElementById('signupForm').addEventListener('submit', async function 
   e.preventDefault(); // Prevent the form from refreshing the page
 
 //   2.
-//   const username = document.getElementById('username').value;
-//   const email = document.getElementById('email').value;
-//   const password = document.getElementById('password').value;
+  const username = document.getElementById('username').value;
+  const email = document.getElementById('email').value;
+  const password = document.getElementById('password').value;
 
   try {
       const response = await fetch('/signup', {
@@ -32,8 +32,8 @@ document.getElementById('signupForm').addEventListener('submit', async function 
       alert(result); // Show server response (success or error)
 
     //   3.
-//   } catch (err) {
-//       console.error('Error:', err);
-//       alert('Failed to create account.');
-//   }
+  } catch (err) {
+      console.error('Error:', err);
+      alert('Failed to create account.');
+  }
 });
