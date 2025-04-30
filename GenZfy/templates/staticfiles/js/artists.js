@@ -143,16 +143,16 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 // 5.
-// function playInMainPlayer(videoId) {
-//     mainPlayer.classList.add('active');
-//     mainPlayer.innerHTML = `
-//         <iframe
-//             src="https://www.youtube.com/embed/${videoId}?autoplay=1"
-//             allow="autoplay; encrypted-media"
-//             allowfullscreen
-//         ></iframe>
-//     `;
-// }
+function playInMainPlayer(videoId) {
+    mainPlayer.classList.add('active');
+    mainPlayer.innerHTML = `
+        <iframe
+            src="https://www.youtube.com/embed/${videoId}?autoplay=1"
+            allow="autoplay; encrypted-media"
+            allowfullscreen
+        ></iframe>
+    `;
+}
 
 function clearPlayer() {
     mainPlayer.classList.remove('active');
