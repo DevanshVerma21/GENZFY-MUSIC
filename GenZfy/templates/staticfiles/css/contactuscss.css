@@ -197,7 +197,7 @@ form .icon {
 /* Maintain animations */
 
 /* 3. */
-/* @keyframes float {
+@keyframes float {
     0% { transform: translateY(0px); }
     50% { transform: translateY(-20px); }
     100% { transform: translateY(0px); }
@@ -207,7 +207,7 @@ form .icon {
     0% { opacity: 0; }
     50% { opacity: 0.5; }
     100% { opacity: 1; }
-} */
+}
 
 #envelope {
   animation: float 2s ease-in-out infinite;
