@@ -1,9 +1,9 @@
 const API_KEY = 'AIzaSyCO8gSHP_CCJodpeaX-k53gHR9jig2SrJ0'; 
 const inputSearch = document.querySelector('.input');
 // 1.
-// const filterButton = document.querySelector('#search-icon');
-// const videoContainer = document.querySelector('#video-container');
-// const mainPlayer = document.querySelector('#main-player'); // New player container
+const filterButton = document.querySelector('#search-icon');
+const videoContainer = document.querySelector('#video-container');
+const mainPlayer = document.querySelector('#main-player'); // New player container
 
 // Fetch videos from YouTube
 async function fetchYouTubeVideos(query) {
