@@ -607,7 +607,7 @@ a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
 
 
 /* 5. */
-/* .video-item:hover {
+.video-item:hover {
   transform: scale(1.05);
   box-shadow: 0 0 15px #000000, 0 0 30px #ffffff;
   border-radius: 12px;
@@ -617,7 +617,7 @@ a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
   width: 100%;
   border-radius: 12px;
   display: block;
-} */
+}
 
 
 input.filled ~ label {
