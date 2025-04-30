@@ -95,7 +95,7 @@
   }
   
   /* 5. */
-  /* @keyframes spin {
+  @keyframes spin {
     from {
       --angle: 0deg;
     }
@@ -104,4 +104,4 @@
     }
 
   }
-   */
+  
