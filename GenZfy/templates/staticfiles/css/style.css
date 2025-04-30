@@ -8,14 +8,14 @@
     color: #f0f0f0;
   }
   /* 1. */
-  /* body {
+  body {
     min-height: 100vh;
     background: #0b0d15;
     color: #a2a5b3;
     display: flex; 
     justify-content: center; 
     align-items: center;
-  } */
+  }
   #welcome-screen {
               position: fixed;
               top: 0;
@@ -37,14 +37,14 @@
           /* Fade out animation */
           
           /* 2. */
-          /* @keyframes fadeOut {
+          @keyframes fadeOut {
               0% {
                   opacity: 1;
               }
               100% {
                   opacity: 1;
               }
-          } */
+          }
   .card {
     padding: 2em;
     background: #1c1f2b;
