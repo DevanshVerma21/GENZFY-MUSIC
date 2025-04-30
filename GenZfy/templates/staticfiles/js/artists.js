@@ -92,28 +92,28 @@ function displayVideos(videos) {
 // Play selected video in main player
 
 // 4.
-// function playInMainPlayer(videoId) {
-//     mainPlayer.innerHTML = `
-//         <iframe
-//             width="100%"
-//             height="500"
-//             src="https://www.youtube.com/embed/${videoId}?autoplay=1"
-//             frameborder="0"
-//             allow="autoplay; encrypted-media"
-//             allowfullscreen
-//         ></iframe>
-//     `;
-// }
+function playInMainPlayer(videoId) {
+    mainPlayer.innerHTML = `
+        <iframe
+            width="100%"
+            height="500"
+            src="https://www.youtube.com/embed/${videoId}?autoplay=1"
+            frameborder="0"
+            allow="autoplay; encrypted-media"
+            allowfullscreen
+        ></iframe>
+    `;
+}
 
-// // Event listeners
-// inputSearch.addEventListener('keypress', (e) => {
-//     if (e.key === 'Enter') {
-//         const query = inputSearch.value.trim();
-//         if (query) {
-//             fetchYouTubeVideos(query);
-//         }
-//     }
-// });
+// Event listeners
+inputSearch.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') {
+        const query = inputSearch.value.trim();
+        if (query) {
+            fetchYouTubeVideos(query);
+        }
+    }
+});
 
 filterButton.addEventListener('click', () => {
     const query = inputSearch.value.trim();
