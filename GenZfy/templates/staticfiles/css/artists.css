@@ -275,7 +275,7 @@ body {
  /* Footer */
 
  /* 3. */
- /* .new_footer_area {
+ .new_footer_area {
     background: #000000;
     width: 100%;
     padding-right: 15%;
@@ -285,7 +285,7 @@ body {
     padding: 120px 0px 270px;
     position: relative;
     overflow-x: hidden;
-} */
+}
 .new_footer_area .footer_bottom {
     padding-top: 5px;
     padding-bottom: 50px;
