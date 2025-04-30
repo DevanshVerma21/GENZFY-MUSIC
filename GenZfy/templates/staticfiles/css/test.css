@@ -133,13 +133,13 @@ img {
 }
 
 /* 4. */
-/* @keyframes float {
+@keyframes float {
   0%   { transform: translateY(0) rotate(0deg); }
   25%  { transform: translateY(-6px) rotate(-1deg); }
   50%  { transform: translateY(0px) rotate(1deg); }
   75%  { transform: translateY(6px) rotate(-1deg); }
   100% { transform: translateY(0) rotate(0deg); }
-} */
+}
 
 /* Responsive Artist Cards */
 .moxybaul, .moxybaul1, .moxybaul2 {
