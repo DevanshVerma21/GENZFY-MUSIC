@@ -22,12 +22,12 @@ async function fetchYouTubeVideos(query) {
         const searchData = await searchResponse.json();
 
         // 2.
-        // if (!searchData.items || searchData.items.length === 0) {
-        //     loader.style.display = 'none';
-        //     videoContainer.innerHTML = '<p>No videos found. Try another search.</p>';
-        //     videoContainer.style.display = 'block';
-        //     return;
-        // }
+        if (!searchData.items || searchData.items.length === 0) {
+            loader.style.display = 'none';
+            videoContainer.innerHTML = '<p>No videos found. Try another search.</p>';
+            videoContainer.style.display = 'block';
+            return;
+        }
 
         // Get video IDs for checking status
         const videoIds = searchData.items.map(item => item.id.videoId).join(',');
