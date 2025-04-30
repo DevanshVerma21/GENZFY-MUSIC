@@ -1,17 +1,17 @@
 // 1.
-// function myFunction() {
-//     document.getElementById("myDropdown").classList.toggle("show");
-//   }
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+  }
   
-//   // Close the dropdown if the user clicks outside of it
-//   window.onclick = function(e) {
-//     if (!e.target.matches('.dropbtn')) {
-//     var myDropdown = document.getElementById("myDropdown");
-//       if (myDropdown.classList.contains('show')) {
-//         myDropdown.classList.remove('show');
-//       }
-//     }
-//   }
+  // Close the dropdown if the user clicks outside of it
+  window.onclick = function(e) {
+    if (!e.target.matches('.dropbtn')) {
+    var myDropdown = document.getElementById("myDropdown");
+      if (myDropdown.classList.contains('show')) {
+        myDropdown.classList.remove('show');
+      }
+    }
+  }
  // Signup form submission handler
 document.getElementById('signupForm').addEventListener('submit', async function (e) {
   e.preventDefault(); // Prevent the form from refreshing the page
@@ -30,7 +30,7 @@ document.getElementById('signupForm').addEventListener('submit', async function 
 
       const result = await response.text();
       alert(result); // Show server response (success or error)
-      
+
     //   3.
 //   } catch (err) {
 //       console.error('Error:', err);
