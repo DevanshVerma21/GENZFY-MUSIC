@@ -132,14 +132,14 @@ text-shadow: 0 0 5px #ffd000, 0 0 10px #ffcc00;
 }
 
 /* 4. */
-/* @keyframes animate {
+@keyframes animate {
     0% {
         transform: rotate(0deg);
     }
     100% {
         transform: rotate(360deg);
     }
-} */
+}
 
 h2 {
     color: #fff;
