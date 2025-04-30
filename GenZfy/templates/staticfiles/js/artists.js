@@ -60,12 +60,12 @@ async function fetchYouTubeVideos(query) {
 
     } 
     // 3.
-    // catch (error) {
-    //     console.error('Error fetching YouTube API:', error);
-    //     loader.style.display = 'none';
-    //     videoContainer.innerHTML = '<p>An error occurred while fetching videos. Please try again.</p>';
-    //     videoContainer.style.display = 'block';
-    // }
+    catch (error) {
+        console.error('Error fetching YouTube API:', error);
+        loader.style.display = 'none';
+        videoContainer.innerHTML = '<p>An error occurred while fetching videos. Please try again.</p>';
+        videoContainer.style.display = 'block';
+    }
 }
 
 // Show thumbnails in grid
