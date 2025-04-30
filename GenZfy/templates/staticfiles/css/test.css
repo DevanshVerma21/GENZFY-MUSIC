@@ -250,7 +250,7 @@ img {
 }
 
 /* 6. */
-/* @media (max-width: 480px) {
+@media (max-width: 480px) {
   .btn {
     padding: 0.8rem 1.5rem;
     font-size: 0.9rem;
@@ -265,4 +265,4 @@ img {
     align-items: center;
     text-align: center;
   }
-} */
+}
