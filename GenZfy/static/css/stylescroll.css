@@ -1,0 +1,669 @@
+body{
+    background:#000;
+  }
+  
+  .moxybaul{
+    width: 700;
+    height: 550px;
+    background:url(https://resources.tidal.com/images/817e43bd/8fa9/4143/9778/0ef85dcf9fe4/640x640.jpg);
+    margin:auto;
+    border:20px solid #080808;
+    outline:1px solid #111;
+    overflow: hidden;
+    transition: all ease-in-out 1s;
+  }
+  /* .moxybaul1{
+    width: 700;
+    height: 550px;
+    background:url(arijit\ singh\ singing.png);
+    background-size: cover;
+    margin:auto;
+    border:20px solid #080808;
+    outline:1px solid #111;
+    overflow: hidden;
+    transition: all ease-in-out 1s;
+  } */
+  /* .moxybaul2{
+    width: 700;
+    height: 550px;
+    background:url(drake1.jpg);
+    background-size: cover;
+    margin:auto;
+    border:20px solid #080808;
+    outline:1px solid #111;
+    overflow: hidden;
+    transition: all ease-in-out 1s;
+  } */
+  
+  .nameboxm{
+    display: flex;
+    color: #ccc;
+    text-transform:lowercase;
+    text-align: center;
+    width: 400px;
+    height: 550px;
+    margin: auto;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+  }
+  /* .nameboxm1{
+    display: flex;
+    color: #ccc;
+    text-transform:lowercase;
+    text-align: center;
+    width: 400px;
+    height: 550px;
+    margin: auto;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+  } */
+  /* .nameboxm2{
+    display: flex;
+    color: #ccc;
+    text-transform:lowercase;
+    text-align: center;
+    width: 400px;
+    height: 550px;
+    margin: auto;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+  } */
+  .nmox1{
+    font-family: chill;
+    font-size: 250px;
+    position: relative;
+    left:-60px;
+    transition: all ease-in-out 0.9s;
+    transition-delay: 0.8s;
+  }
+  .nmox3{
+    font-family: chill;
+    font-size: 250px;
+    position: relative;
+    left:-60px;
+    transition: all ease-in-out 0.9s;
+    transition-delay: 0.8s;
+  }
+  /* .nmox5{
+    font-family: chill;
+    font-size: 250px;
+    position: relative;
+    left:-60px;
+    transition: all ease-in-out 0.9s;
+    transition-delay: 0.8s;
+  } */
+  
+  /* .nmox2{
+    font-family: chill;
+    font-size: 250px;
+    position: relative;
+    right: -30px;
+    transition: all ease-in-out 0.8s;
+    transition-delay: 0.8s;
+  } */
+  /* .nmox4{
+    font-family: chill;
+    font-size: 250px;
+    position: relative;
+    right: -30px;
+    transition: all ease-in-out 0.8s;
+    transition-delay: 0.8s;
+  } */
+  /* .nmox6{
+    font-family: chill;
+    font-size: 250px;
+    position: relative;
+    right: -30px;
+    transition: all ease-in-out 0.8s;
+    transition-delay: 0.8s;
+  } */
+
+  
+  .moxybaul:hover .nmox1{
+    left: -450px;
+    transition: all ease-in-out 0.8s;
+  }
+  .moxybaul1:hover .nmox3{
+    left: -450px;
+    transition: all ease-in-out 0.8s;
+  }
+  .moxybaul2:hover .nmox5{
+    left: -450px;
+    transition: all ease-in-out 0.8s;
+  }
+  .moxybaul:hover .nmox2{
+    right: -450px;
+    transition: all ease-in-out 0.8s;
+  }
+  .moxybaul1:hover .nmox4{
+    right: -450px;
+    transition: all ease-in-out 0.8s;
+  }
+  .moxybaul2:hover .nmox6{
+    right: -450px;
+    transition: all ease-in-out 0.8s;
+  }
+  
+  .moxybaul:hover{
+    /* background:url(karanimg.jpg); */
+    transition: all ease-in-out 1s;
+  }
+  .moxybaul1:hover{
+    /* background:url(arijit\ singh\ info.png); */
+    background-size: cover;
+
+    transition: all ease-in-out 1s;
+  }
+  .moxybaul2:hover{
+    /* background:url(drake7.webp); */
+    background-size: cover;
+
+    transition: all ease-in-out 1s;
+  }
+  
+  .box-dmox{
+    width: 800px;
+    height: 550px;
+    position: relative;
+    top: -550px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: rajdhani;
+    text-transform: uppercase;
+    font-size: 10px;
+    letter-spacing:1px;
+  }
+  .box-dmox1{
+    width: 800px;
+    height: 550px;
+    position: relative;
+    top: -550px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: rajdhani;
+    text-transform: uppercase;
+    font-size: 10px;
+    letter-spacing:1px;
+  }
+  .box-dmox2{
+    width: 800px;
+    height: 550px;
+    position: relative;
+    top: -550px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: rajdhani;
+    text-transform: uppercase;
+    font-size: 10px;
+    letter-spacing:1px;
+  }
+  .datosmox{
+    width: 240px;
+    height: 380px;
+    background:rgba(0,0,0,0.6);
+    color: #ccc;
+    padding:40px;
+    line-height: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    top: -520px;
+    transition: all ease-in-out 0.8s;
+  }
+  /* .datosmox1{
+    width: 240px;
+    height: 380px;
+    background:rgba(0,0,0,0.6);
+    color: #ccc;
+    padding:40px;
+    line-height: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    top: -520px;
+    transition: all ease-in-out 0.8s;
+  } */
+  /* .datosmox2{
+    width: 240px;
+    height: 380px;
+    background:rgba(0,0,0,0.6);
+    color: #ccc;
+    padding:40px;
+    line-height: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    top: -520px;
+    transition: all ease-in-out 0.8s;
+  } */
+  
+  .dmox{
+    width: 240px;
+    border-bottom:1px solid #5c4763;
+    display: flex;
+    align-items: center;
+    margin-top:10px;
+    padding-bottom:1px;
+    justify-content: space-between;
+  }
+  .dmox1{
+    width: 240px;
+    border-bottom:1px solid #5c4763;
+    display: flex;
+    align-items: center;
+    margin-top:10px;
+    padding-bottom:1px;
+    justify-content: space-between;
+  }
+  .dmox2{
+    width: 240px;
+    border-bottom:1px solid #5c4763;
+    display: flex;
+    align-items: center;
+    margin-top:10px;
+    padding-bottom:1px;
+    justify-content: space-between;
+  }
+  .datosmox m{
+    font-weight: 700;
+  }
+  
+  .datosmox n{
+    text-align: right;
+  }
+  
+  .datosmox1 m{
+    font-weight: 700;
+  }
+  
+  .datosmox1 n{
+    text-align: right;
+  }
+  .datosmox2 m{
+    font-weight: 700;
+  }
+  
+  .datosmox2 n{
+    text-align: right;
+  }
+  .moxquo{
+    background:#5c4763;
+    padding:10px;
+    text-align:justify;
+    height: 50px;
+    line-height: 10px;
+  }
+  .moxquo1{
+    background:#5c4763;
+    padding:10px;
+    text-align:justify;
+    height: 50px;
+    line-height: 10px;
+  }
+  .moxquo2{
+    background:#5c4763;
+    padding:10px;
+    text-align:justify;
+    height: 50px;
+    line-height: 10px;
+  }
+  
+  .moxgif{
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    border:10px solid #222;
+    margin: auto;
+    margin-bottom: 20px;
+    /* background:url(kdisc1.jpg); */
+    background-size: cover;
+  }
+  .moxgif1{
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    border:10px solid #222;
+    margin: auto;
+    margin-bottom: 20px;
+    /* background:url(adisc1.jpeg); */
+    background-size: cover;
+
+  }
+  .moxgif2{
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    border:10px solid #222;
+    margin: auto;
+    margin-bottom: 20px;
+    /* background:url(ddisc1.jpeg); */
+    background-size: cover;
+
+  }
+  
+  .musicmox{
+    width: 240px;
+    height: 380px;
+    background:rgba(0,0,0,0.6);
+    margin-left: 40px;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+    bottom: -520px;
+    transition: all ease-in-out 0.8s;
+  }
+  /* .musicmox1{
+    width: 240px;
+    height: 380px;
+    background:rgba(0,0,0,0.6);
+    margin-left: 40px;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+    bottom: -520px;
+    transition: all ease-in-out 0.8s;
+  } */
+  /* .musicmox2{
+    width: 240px;
+    height: 380px;
+    background:rgba(0,0,0,0.6);
+    margin-left: 40px;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+    bottom: -520px;
+    transition: all ease-in-out 0.8s;
+  } */
+  
+  .moxybaul:hover .musicmox{
+    bottom: 0px;
+    transition: all ease-in-out 0.8s;
+    transition-delay: 0.8s;
+  }
+  .moxybaul1:hover .musicmox1{
+    bottom: 0px;
+    transition: all ease-in-out 0.8s;
+    transition-delay: 0.8s;
+  }
+  .moxybaul2:hover .musicmox2{
+    bottom: 0px;
+    transition: all ease-in-out 0.8s;
+    transition-delay: 0.8s;
+  }
+  
+  
+  .mmox{
+    width: 240px;
+    display: flex;
+    align-items: center;
+    background:rgba(0,0,0,0.4);
+    padding:4px;
+    line-height: 10px;
+  }
+  .mmox1{
+    width: 240px;
+    display: flex;
+    align-items: center;
+    background:rgba(0,0,0,0.4);
+    padding:4px;
+    line-height: 10px;
+  }
+  .mmox2{
+    width: 240px;
+    display: flex;
+    align-items: center;
+    background:rgba(0,0,0,0.4);
+    padding:4px;
+    line-height: 10px;
+  }
+  
+  .moxybaul:hover .datosmox{
+    top: 0px;
+    transition: all ease-in-out 0.8s;
+    transition-delay: 0.8s;
+  }
+  .moxybaul1:hover .datosmox1{
+    top: 0px;
+    transition: all ease-in-out 0.8s;
+    transition-delay: 0.8s;
+  }
+  .moxybaul2:hover .datosmox2{
+    top: 0px;
+    transition: all ease-in-out 0.8s;
+    transition-delay: 0.8s;
+  }
+  .mmox i{
+    font-size: 20px;
+    color: #ccc;
+    padding:10px;
+  }
+  .mmox1 i{
+    font-size: 20px;
+    color: #ccc;
+    padding:10px;
+  }
+  .mmox2 i{
+    font-size: 20px;
+    color: #ccc;
+    padding:10px;
+  }
+  
+  .mmox a:hover{
+    color: #ccc;
+    transition: all ease-in-out 0.3s;
+  }
+  
+  .mmox a{
+    width: 70px;
+    font-size: 11px;
+    font-weight: 700;
+    color: #5c4763;
+    border:0;
+    text-decoration: none;
+    transition: all ease-in-out 0.3s;
+  }
+  .mmox1 a:hover{
+    color: #ccc;
+    transition: all ease-in-out 0.3s;
+  }
+  
+  .mmox1 a{
+    width: 70px;
+    font-size: 11px;
+    font-weight: 700;
+    color: #5c4763;
+    border:0;
+    text-decoration: none;
+    transition: all ease-in-out 0.3s;
+  }
+  .mmox2 a:hover{
+    color: #ccc;
+    transition: all ease-in-out 0.3s;
+  }
+  
+  .mmox2 a{
+    width: 70px;
+    font-size: 11px;
+    font-weight: 700;
+    color: #5c4763;
+    border:0;
+    text-decoration: none;
+    transition: all ease-in-out 0.3s;
+  }
+  
+  .mmox m{
+    font-size: 11px;
+    color: #999;
+    margin-left: 5px;
+    display: flex;
+  }
+  
+  .mmox m:before{
+    content: '/';
+    font-weight: 700;
+    color: #5c4763;
+    margin-right: 10px;
+  }
+
+  .mmox1 m{
+    font-size: 11px;
+    color: #999;
+    margin-left: 5px;
+    display: flex;
+  }
+  
+  .mmox1 m:before{
+    content: '/';
+    font-weight: 700;
+    color: #5c4763;
+    margin-right: 10px;
+  }
+  .mmox2 m{
+    font-size: 11px;
+    color: #999;
+    margin-left: 5px;
+    display: flex;
+  }
+  
+  .mmox2 m:before{
+    content: '/';
+    font-weight: 700;
+    color: #5c4763;
+    margin-right: 10px;
+  }
+  .botonmox{
+    width: 250px;
+    margin: auto;
+    display: flex;
+    align-items:center;
+    margin-top: 20px;
+    justify-content: space-between;
+  }
+  .botonmox1{
+    width: 250px;
+    margin: auto;
+    display: flex;
+    align-items:center;
+    margin-top: 20px;
+    justify-content: space-between;
+  }
+  .botonmox2{
+    width: 250px;
+    margin: auto;
+    display: flex;
+    align-items:center;
+    margin-top: 20px;
+    justify-content: space-between;
+  }
+  .botonmox a{
+    color: #5c4763;
+    font-size: 20px;
+    -webkit-text-stroke: 1px transparent;
+    transition: all ease-in-out 0.4s;
+  }
+  
+  .botonmox a:hover{
+    -webkit-text-stroke: 1px #5c4763;
+    color: transparent;
+    transition: all ease-in-out 0.4s;
+  }
+  .botonmox1 a{
+    color: #5c4763;
+    font-size: 20px;
+    -webkit-text-stroke: 1px transparent;
+    transition: all ease-in-out 0.4s;
+  }
+  
+  .botonmox1 a:hover{
+    -webkit-text-stroke: 1px #5c4763;
+    color: transparent;
+    transition: all ease-in-out 0.4s;
+  }
+  .botonmox2 a{
+    color: #5c4763;
+    font-size: 20px;
+    -webkit-text-stroke: 1px transparent;
+    transition: all ease-in-out 0.4s;
+  }
+  
+  .botonmox2 a:hover{
+    -webkit-text-stroke: 1px #5c4763;
+    color: transparent;
+    transition: all ease-in-out 0.4s;
+  }
+  
+  .bottomlyrm{
+    font-family: rajdhani;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    color: #ccc;
+    position: relative;
+    top: -600px;
+    text-align: center;
+    line-height: 10px;
+    transition: all ease-in-out 0.8s;
+    transition-delay: 1s;
+  }
+  
+  .moxybaul:hover .bottomlyrm{
+    filter:blur(10px);
+    opacity:0;
+    transition: all ease-in-out 0.8s;
+  }
+  .bottomlyrm1{
+    font-family: rajdhani;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    color: #ccc;
+    position: relative;
+    top: -600px;
+    text-align: center;
+    line-height: 10px;
+    transition: all ease-in-out 0.8s;
+    transition-delay: 1s;
+  }
+  .bottomlyrm2{
+    font-family: rajdhani;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    color: #ccc;
+    position: relative;
+    top: -600px;
+    text-align: center;
+    line-height: 10px;
+    transition: all ease-in-out 0.8s;
+    transition-delay: 1s;
+  }
+  
+  .moxybaul1:hover .bottomlyrm1{
+    filter:blur(10px);
+    opacity:0;
+    transition: all ease-in-out 0.8s;
+  }
+  .moxybaul2:hover .bottomlyrm2{
+    filter:blur(10px);
+    opacity:0;
+    transition: all ease-in-out 0.8s;
+  }
+  
+  @font-face {
+  font-family: 'Chill';
+  font-style: normal;
+  font-weight: normal;
+  src: url('https://dl.dropbox.com/s/agpnu5irqlaaeco/Chillvornia%20Stamp%20Slant.otf') format('woff');
+  }
