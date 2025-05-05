@@ -360,7 +360,7 @@ body{
     bottom: -520px;
     transition: all ease-in-out 0.8s;
   }
-  /* .musicmox1{
+  .musicmox1{
     width: 240px;
     height: 380px;
     background:rgba(0,0,0,0.6);
@@ -372,8 +372,8 @@ body{
     position: relative;
     bottom: -520px;
     transition: all ease-in-out 0.8s;
-  } */
-  /* .musicmox2{
+  }
+  .musicmox2{
     width: 240px;
     height: 380px;
     background:rgba(0,0,0,0.6);
@@ -385,7 +385,7 @@ body{
     position: relative;
     bottom: -520px;
     transition: all ease-in-out 0.8s;
-  } */
+  }
   
   .moxybaul:hover .musicmox{
     bottom: 0px;
