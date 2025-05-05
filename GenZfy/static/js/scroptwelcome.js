@@ -27,18 +27,18 @@ window.onclick = function(event) {
     }
   });
   
-//   window.addEventListener("DOMContentLoaded", () => {
-//     const gens = document.querySelectorAll('.gldgen.slide-in-left');
-//     const others = document.querySelectorAll('.gldgen.slide-in-right');
+  window.addEventListener("DOMContentLoaded", () => {
+    const gens = document.querySelectorAll('.gldgen.slide-in-left');
+    const others = document.querySelectorAll('.gldgen.slide-in-right');
   
-//     gens.forEach((el, i) => {
-//       el.style.animationDelay = `${0.0+ i*0.4}s`;
-//     });
+    gens.forEach((el, i) => {
+      el.style.animationDelay = `${0.0+ i*0.4}s`;
+    });
   
-//     others.forEach((el, i) => {
-//       el.style.animationDelay = `${0.0 + 0.1}s`;
-//     });
-//   });
+    others.forEach((el, i) => {
+      el.style.animationDelay = `${0.0 + 0.1}s`;
+    });
+  });
   
   
 //   const topHero = document.getElementById('topHero');
