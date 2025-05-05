@@ -148,17 +148,17 @@ body{
   }
   
   .moxybaul:hover{
-    /* background:url(karanimg.jpg); */
+    background:url(karanimg.jpg);
     transition: all ease-in-out 1s;
   }
   .moxybaul1:hover{
-    /* background:url(arijit\ singh\ info.png); */
+    background:url(arijit\ singh\ info.png);
     background-size: cover;
 
     transition: all ease-in-out 1s;
   }
   .moxybaul2:hover{
-    /* background:url(drake7.webp); */
+    background:url(drake7.webp);
     background-size: cover;
 
     transition: all ease-in-out 1s;
