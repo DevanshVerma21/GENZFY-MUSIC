@@ -788,6 +788,42 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
+@media screen and (max-width: 768px) {
+  .dropdown {
+    position: static; /* Change from relative to static positioning on mobile */
+  }
+  
+  .dropdown-content {
+    position: fixed; /* Use fixed instead of absolute */
+    right: 50%; /* Center it horizontally */
+    transform: translateX(50%); /* Ensure perfect centering */
+    top: auto; /* Let it position naturally based on its container */
+    min-width: 200px; /* Set a consistent width */
+    max-width: 80%; /* Limit width to 80% of screen */
+    margin: 0 auto; /* Center alignment */
+  }
+  
+  /* Handle the welcome message on smaller screens */
+  .welcome-message {
+    padding: 8px;
+  }
+  
+  .welcome-message p {
+    font-size: 12px;
+  }
+  
+  .dropdown-username {
+    font-size: 14px !important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .dropdown-content {
+    max-width: 90%; 
+    right: 45%; 
+  }
+} 
+
 
 /*************footer End*****************/
 
