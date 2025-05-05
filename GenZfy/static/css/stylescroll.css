@@ -87,23 +87,23 @@ body{
     transition: all ease-in-out 0.9s;
     transition-delay: 0.8s;
   }
-  /* .nmox5{
+  .nmox5{
     font-family: chill;
     font-size: 250px;
     position: relative;
     left:-60px;
     transition: all ease-in-out 0.9s;
     transition-delay: 0.8s;
-  } */
+  }
   
-  /* .nmox2{
+  .nmox2{
     font-family: chill;
     font-size: 250px;
     position: relative;
     right: -30px;
     transition: all ease-in-out 0.8s;
     transition-delay: 0.8s;
-  } */
+  }
   .nmox4{
     font-family: chill;
     font-size: 250px;
