@@ -1,17 +1,17 @@
-// window.addEventListener('scroll', function() {
-//     const footer = document.getElementById('footer');
-//     const dogImage = document.getElementById('dogImage');
+window.addEventListener('scroll', function() {
+    const footer = document.getElementById('footer');
+    const dogImage = document.getElementById('dogImage');
 
-//     // Check if the footer is in the viewport
-//     const footerPosition = footer.getBoundingClientRect();
-//     if (footerPosition.top <= window.innerHeight && footerPosition.bottom >= 0) {
-//         dogImage.style.animation = 'wink 1s ';
-//         dogImage.classList.add('wink');
-//     } else {
-//         dogImage.style.animation = '';
-//         dogImage.classList.remove('wink');
-//     }
-// });
+    // Check if the footer is in the viewport
+    const footerPosition = footer.getBoundingClientRect();
+    if (footerPosition.top <= window.innerHeight && footerPosition.bottom >= 0) {
+        dogImage.style.animation = 'wink 1s ';
+        dogImage.classList.add('wink');
+    } else {
+        dogImage.style.animation = '';
+        dogImage.classList.remove('wink');
+    }
+});
 
 // CSS for the wink effect
 const style = document.createElement('style');
