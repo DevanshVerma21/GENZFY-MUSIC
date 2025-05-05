@@ -47,7 +47,7 @@ body{
     justify-content: center;
     align-items: center;
   }
-  /* .nameboxm1{
+  .nameboxm1{
     display: flex;
     color: #ccc;
     text-transform:lowercase;
@@ -58,8 +58,8 @@ body{
     position: relative;
     justify-content: center;
     align-items: center;
-  } */
-  /* .nameboxm2{
+  }
+  .nameboxm2{
     display: flex;
     color: #ccc;
     text-transform:lowercase;
@@ -70,7 +70,7 @@ body{
     position: relative;
     justify-content: center;
     align-items: center;
-  } */
+  }
   .nmox1{
     font-family: chill;
     font-size: 250px;
