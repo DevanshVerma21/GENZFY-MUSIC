@@ -80,16 +80,16 @@ window.onclick = function(event) {
         });
     });
   });
-//   document.addEventListener('DOMContentLoaded', function() {
-//     let messages = document.querySelectorAll('.alert');
-//     if (messages.length > 0) {
-//       setTimeout(function() {
-//         messages.forEach(function(message) {
-//           message.style.opacity = '0';
-//           setTimeout(function() {
-//             message.style.display = 'none';
-//           }, 500);
-//         });
-//       }, 1500); // Changed from 1000 to 1500ms
-//     }
-//   });
+  document.addEventListener('DOMContentLoaded', function() {
+    let messages = document.querySelectorAll('.alert');
+    if (messages.length > 0) {
+      setTimeout(function() {
+        messages.forEach(function(message) {
+          message.style.opacity = '0';
+          setTimeout(function() {
+            message.style.display = 'none';
+          }, 500);
+        });
+      }, 1500); // Changed from 1000 to 1500ms
+    }
+  });
