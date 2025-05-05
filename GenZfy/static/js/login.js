@@ -1,30 +1,30 @@
-// document.getElementById('loginForm').addEventListener('submit', async function (e) {
-//     e.preventDefault();
+document.getElementById('loginForm').addEventListener('submit', async function (e) {
+    e.preventDefault();
 
-//     const email = document.getElementById('email').value;
-//     const password = document.getElementById('password').value;
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
 
-//     try {
-//         const response = await fetch('/login', {
-//             method: 'POST',
-//             headers: { 'Content-Type': 'application/json' },
-//             body: JSON.stringify({ email, password }),
-//         });
+    try {
+        const response = await fetch('/login', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ email, password }),
+        });
 
-//         if (response.ok) {
-//             const result = await response.json();
-//             localStorage.setItem('authToken', result.token); // Save JWT token
-//             alert('Login successful!');
-//             window.location.href = 'welcome.html'; // Redirect to welcome page
-//         } else {
-//             const errorText = await response.text();
-//             alert(errorText);
-//         }
-//     } catch (err) {
-//         console.error('Login error:', err);
-//         alert('Failed to log in.');
-//     }
-// });
+        if (response.ok) {
+            const result = await response.json();
+            localStorage.setItem('authToken', result.token); // Save JWT token
+            alert('Login successful!');
+            window.location.href = 'welcome.html'; // Redirect to welcome page
+        } else {
+            const errorText = await response.text();
+            alert(errorText);
+        }
+    } catch (err) {
+        console.error('Login error:', err);
+        alert('Failed to log in.');
+    }
+});
 async function updateNavbar() {
     const token = localStorage.getItem('authToken'); // Retrieve token from localStorage
     if (!token) return; // If no token, show login option
