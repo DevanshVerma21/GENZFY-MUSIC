@@ -1,4 +1,4 @@
-const API_KEY = 'AIzaSyCO8gSHP_CCJodpeaX-k53gHR9jig2SrJ0'; 
+const API_KEY = ''; 
 const inputSearch = document.querySelector('.input');
 // 1.
 const filterButton = document.querySelector('#search-icon');
