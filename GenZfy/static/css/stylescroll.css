@@ -229,7 +229,7 @@ body{
     top: -520px;
     transition: all ease-in-out 0.8s;
   } */
-  /* .datosmox2{
+  .datosmox2{
     width: 240px;
     height: 380px;
     background:rgba(0,0,0,0.6);
@@ -241,7 +241,7 @@ body{
     position: relative;
     top: -520px;
     transition: all ease-in-out 0.8s;
-  } */
+  }
   
   .dmox{
     width: 240px;
