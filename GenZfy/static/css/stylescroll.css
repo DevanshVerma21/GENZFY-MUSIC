@@ -104,22 +104,22 @@ body{
     transition: all ease-in-out 0.8s;
     transition-delay: 0.8s;
   } */
-  /* .nmox4{
+  .nmox4{
     font-family: chill;
     font-size: 250px;
     position: relative;
     right: -30px;
     transition: all ease-in-out 0.8s;
     transition-delay: 0.8s;
-  } */
-  /* .nmox6{
+  }
+  .nmox6{
     font-family: chill;
     font-size: 250px;
     position: relative;
     right: -30px;
     transition: all ease-in-out 0.8s;
     transition-delay: 0.8s;
-  } */
+  }
 
   
   .moxybaul:hover .nmox1{
