@@ -12,7 +12,7 @@ body{
     overflow: hidden;
     transition: all ease-in-out 1s;
   }
-  /* .moxybaul1{
+  .moxybaul1{
     width: 700;
     height: 550px;
     background:url(arijit\ singh\ singing.png);
@@ -22,8 +22,8 @@ body{
     outline:1px solid #111;
     overflow: hidden;
     transition: all ease-in-out 1s;
-  } */
-  /* .moxybaul2{
+  }
+  .moxybaul2{
     width: 700;
     height: 550px;
     background:url(drake1.jpg);
@@ -33,7 +33,7 @@ body{
     outline:1px solid #111;
     overflow: hidden;
     transition: all ease-in-out 1s;
-  } */
+  }
   
   .nameboxm{
     display: flex;
