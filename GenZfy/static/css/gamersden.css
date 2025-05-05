@@ -568,7 +568,15 @@ animation: slideInRightBounce 1s ease-out forwards;
   transform: scale(1.1);
 }
 
+@media (max-width: 600px) {
+  .platforms-container {
+    gap: 15px;
+  }
 
+  .platforms-container a img {
+    height: 80px;
+  }
+}
   
 
 
