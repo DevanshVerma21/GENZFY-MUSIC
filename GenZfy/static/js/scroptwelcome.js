@@ -41,25 +41,25 @@ window.onclick = function(event) {
   });
   
   
-//   const topHero = document.getElementById('topHero');
+  const topHero = document.getElementById('topHero');
   
-//   window.addEventListener('scroll', () => {
-//     const scrollY = window.scrollY;
-//     const fadeStart = 200;  // start fading after 50px
-//     const fadeUntil = 300; // completely gone at 300px
+  window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY;
+    const fadeStart = 200;  // start fading after 50px
+    const fadeUntil = 300; // completely gone at 300px
   
-//     let opacity = 1;
-//     let blur = 0;
+    let opacity = 1;
+    let blur = 0;
   
-//     if (scrollY > fadeStart) {
-//       const ratio = Math.min((scrollY - fadeStart) / (fadeUntil - fadeStart), 1);
-//       opacity = 1 - ratio;
-//       blur = ratio * 10;
-//     }
+    if (scrollY > fadeStart) {
+      const ratio = Math.min((scrollY - fadeStart) / (fadeUntil - fadeStart), 1);
+      opacity = 1 - ratio;
+      blur = ratio * 10;
+    }
   
-//     topHero.style.opacity = opacity;
-//     topHero.style.filter = `blur(${blur}px)`;
-//   });
+    topHero.style.opacity = opacity;
+    topHero.style.filter = `blur(${blur}px)`;
+  });
   
   document.addEventListener('DOMContentLoaded', function () {
     const inputs = document.querySelectorAll('.form-group input');
