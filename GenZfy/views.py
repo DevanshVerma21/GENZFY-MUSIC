@@ -76,3 +76,10 @@ def artists(request):
 def some_view(request):
     if request.user.is_authenticated:
         UserHistory.objects.create(user=request.user, action="Visited Home Page")
+def history_view(request):
+    if request.user.is_authenticated:
+        history = UserHistory.objects.filter(user=request.user).order_by('-timestamp')
+        return render(request, 'history.html', {'history': history})
+    else:
+        # Redirect to login or show error
+        return redirect('login') 
