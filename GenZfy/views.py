@@ -67,3 +67,5 @@ def logout_view(request):
     return redirect('welcome')
 def login(request):
     return render(request, 'GenZfy/login.html')
+def register(request):
+    return render(request, 'GenZfy/signup.html')
