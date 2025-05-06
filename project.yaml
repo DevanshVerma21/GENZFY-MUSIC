@@ -1,0 +1,36 @@
+project:
+  name: GENZFY-MUSIC
+  description: AI-powered music generation and classification web application.
+  version: 1.0.0
+  author: Devansh Verma
+  repository: https://github.com/DevanshVerma21/GENZFY-MUSIC
+
+environment:
+  python_version: "3.9"
+  dependencies:
+    - django>=3.2
+    - djangorestframework
+    - whitenoise
+
+settings:
+  debug: false
+  allowed_hosts:
+    - "*"
+  static_root: staticfiles
+  media_root: media
+  secret_key: your-secret-key
+  database:
+    engine: django.db.backends.postgresql
+    host: localhost
+    port: 5500
+
+deployment:
+  platform: Heroku
+  buildpacks:
+    - heroku/python
+  procfile: web: gunicorn app.wsgi
+  config_vars:
+    DJANGO_SETTINGS_MODULE: app.settings
+    SECRET_KEY: your-secret-key
+    DEBUG: "False"
+    ALLOWED_HOSTS: "*"
