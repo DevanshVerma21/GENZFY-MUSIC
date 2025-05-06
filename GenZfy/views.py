@@ -71,3 +71,5 @@ def register(request):
     return render(request, 'GenZfy/signup.html')
 def contact(request):
     return render(request, 'GenZfy/contactus.html')
+def artists(request):
+    return render(request, 'GenZfy/artists.html')
