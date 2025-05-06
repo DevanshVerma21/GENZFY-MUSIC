@@ -73,3 +73,6 @@ def contact(request):
     return render(request, 'GenZfy/contactus.html')
 def artists(request):
     return render(request, 'GenZfy/artists.html')
+def some_view(request):
+    if request.user.is_authenticated:
+        UserHistory.objects.create(user=request.user, action="Visited Home Page")
