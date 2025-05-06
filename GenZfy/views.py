@@ -53,3 +53,17 @@ def login_view(request):
             messages.error(request, 'Invalid Credentials')
     
     return render(request, 'GenZfy/login.html')
+def logout_view(request):
+    # Clear user session data
+    if 'user_id' in request.session:
+        del request.session['user_id']
+    if 'username' in request.session:
+        del request.session['username']
+    
+    # Add success message
+    messages.success(request, 'Logout successful')
+    
+    # Redirect to welcome page
+    return redirect('welcome')
+def login(request):
+    return render(request, 'GenZfy/login.html')
