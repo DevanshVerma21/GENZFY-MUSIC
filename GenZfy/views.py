@@ -69,3 +69,5 @@ def login(request):
     return render(request, 'GenZfy/login.html')
 def register(request):
     return render(request, 'GenZfy/signup.html')
+def contact(request):
+      return render(request, 'GenZfy/contactus.html')
