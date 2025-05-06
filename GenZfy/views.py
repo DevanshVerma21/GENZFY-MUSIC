@@ -28,4 +28,28 @@ def login_view(request):
     if request.method == 'POST':
         username = request.POST.get('username')
         password = request.POST.get('password')
+        
+        # First check if user exists (by username or email)
+        user_exists = (User.objects.filter(username__iexact=username).exists() or 
+                      User.objects.filter(email__iexact=username).exists())
+        
+        if not user_exists:
+            messages.error(request, 'User not found. Please register first.')
+            return render(request, 'GenZfy/login.html')
+        
+        # Then check credentials if user exists
+        user = (User.objects.filter(username__iexact=username, password=password).first() or 
+                User.objects.filter(email__iexact=username, password=password).first())
+        
+        if user:
+            request.session['user_id'] = user.id
+            request.session['username'] = user.username.title()
+            messages.success(request, 'Login successful')
+            return render(request, 'GenZfy/login.html', {
+                'login_success': True,
+                'redirect_url': '/home/' 
+            })
+        else:
+            messages.error(request, 'Invalid Credentials')
+    
     return render(request, 'GenZfy/login.html')
