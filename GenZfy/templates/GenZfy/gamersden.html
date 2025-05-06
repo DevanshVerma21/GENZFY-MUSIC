@@ -1,0 +1,265 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GenZfy</title>
+    <link rel="stylesheet" href="{% static 'GenZfy/css/gamersden.css' %}">
+    <link rel="icon" type="image/jpeg" href="{% static 'GenZfy/images/favicon-removebg.png' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'GenZfy/css/stylewelcome.css' %}">
+    <link rel="stylesheet" href="{% static 'GenZfy/css/stylescroll.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+</head>
+<body>
+    
+    <div class="conatiner">
+        <div class="navbar">
+            <img src="{% static 'GenZfy/images/favicon-removebg.png' %}" class="logo">
+          <ul>
+            <li><a href="{% url 'welcome' %}"> HOME </a></li>
+            <li><a href="{% url 'artists' %}">ARTISTS</a></li>
+            <li><a href="{% url 'playlist' %}"> PLAYLIST </a></li>    
+            <li><a href="{% url 'contact' %}"> CONTACT US </a></li>    
+            <li>{% if request.session.user_id %}
+              <div class="dropdown">
+                <button class="dropbtn" onclick="toggleUserDropdown()">
+                  <img src="{% static 'GenZfy/images/icon.png' %}" alt="User Icon" class="user-icon">
+                </button>
+                <div class="dropdown-content" id="userDropdown">
+                  <div class="welcome-message">
+                    <p>Welcome,</p>
+                    <p class="dropdown-username">{{ request.session.username }}</p>
+                  </div>
+                  <a href="{% url 'logout' %}" style="text-align: center;">Logout</a>
+                </div>
+              </div>
+              {% else %}
+              <a href="{% url 'login' %}">LOGIN</a>
+              {% endif %}
+            </li>
+          </ul>
+          </div>
+    
+          <br><br><br><br>
+
+
+
+          <h1 style="text-align: center;font-size: 40px;font-weight: bold;opacity: 0; transform: translateY(50px);
+              transition: opacity 1s ease-out, transform 1s ease-out; opacity: 1;
+              transform: translateY(0);">
+              <span class = "neongen">WELCOME TO GAMERSDEN
+                  <div class="pyramid-loader">
+                      <div class="wrapper">
+              <span class="side side1"></span>
+              <span class="side side2"></span>
+              <span class="side side3"></span>
+              <span class="side side4"></span>
+              <span class="shadow"></span>
+                      </div>  
+                  </div>
+              </span>
+          </h1>
+  
+      
+          <section class="features">
+              <div class="features-image" id="feature-image"></div>
+              <div class="features-content">
+                  <span class="gldgen"><h2>FEATURED POPULAR<br>GAMES</h2></span>
+                  
+                  <div class="feature-item active" id="feature-fitness">
+                      <h2>FORTNITE</h2>
+                      <p>Fortnite is a fast-paced, multiplayer battle royale game developed by Epic Games where players compete to be the last one standing. Set in a vibrant, ever-evolving world, it combines shooting, building, and creative gameplay. With frequent updates, unique skins, and epic events, Fortnite keeps the action fresh and players coming back for more.
+                          <br>Available on <a href="https://store.epicgames.com/en-US/p/fortnite--og">Epic Games</a>
+                      </p>
+                  </div>
+                  
+                  <div class="feature-item" id="feature-dog-park">
+                      <h2>GRAND THEFT AUTO V</h2>
+                      <p>Grand Theft Auto V (GTA 5) is an open-world action-adventure game developed by Rockstar Games, set in the sprawling city of Los Santos. Players can explore the city, complete missions, or cause chaos across land, air, and sea. With a gripping storyline and the dynamic GTA Online mode, it's one of the most iconic games of all time.                       
+                          <br>Available on <a href="https://store.epicgames.com/en-US/p/grand-theft-auto-v">Epic Games</a>
+                      </p>
+                  </div>
+                  
+                  <div class="feature-item" id="feature-gated">
+                      <h2>ROCKET LEAGUE</h2>
+                      <p>Rocket League is a high-octane blend of soccer and rocket-powered cars, developed by Psyonix. Players compete in fast-paced matches where teamwork, skill, and aerial stunts take center stage. With its unique gameplay and competitive edge, Rocket League delivers nonstop action and adrenaline.
+                          <br>Available on <span class="gldgen"><a href="https://store.epicgames.com/en-US/p/rocket-league">Epic Games</a></span>
+                      </p>
+                  </div>
+                  
+                  <div class="feature-item" id="feature-fire-pit">
+                      <h2>PLAYER UNKNOWN'S BATTELGROUND(PUBG)</h2>
+                      <p>PUBG (PlayerUnknown's Battlegrounds) is a battle royale shooter where up to 100 players fight for survival on a shrinking map. Developed by PUBG Studios, it blends strategic gameplay with intense, realistic combat. Whether solo or in squads, every match is a fight to be the last one standing.
+                          <br>Available on <span class="gldgen"><a href="https://store.epicgames.com/en-US/p/pubg-59c1d9">Epic Games</a></span>
+                      </p>
+                  </div>
+                  
+                  <div class="feature-item" id="feature-luxer">
+                      <h2>GRAN TURISMO</h2>
+                      <p>Gran Turismo is a realistic racing simulation game developed by Polyphony Digital, known for its stunning graphics and authentic driving experience. Featuring a vast collection of meticulously detailed cars and real-world tracks, it’s a dream for car enthusiasts. With both casual and competitive modes, Gran Turismo brings the thrill of motorsport to life.
+                          <br>Available on <span class="gldgen"><a href="https://www.playstation.com/en-in/games/gran-turismo-sport/">PS4/PS5</a></span>
+                      </p>
+                  </div>
+                  
+                  <div class="feature-controls">
+                      <div class="feature-control" id="prev-feature">←</div>
+                      <div class="feature-control" id="next-feature">→</div>
+                  </div>
+              </div>
+          </section>
+          <center>
+          <span class="gldgen">
+          <br><br>
+          <h2s style="color: white;font-size: 35px;text-align: center;">Want more?<br>
+          Discover now</h2></span></center>
+        <div class="platforms-container">
+            <a href="https://www.epicgames.com" target="_blank">
+                <img src="{% static 'GenZfy/images/epicgames.png' %}" alt="Epic Games">
+            </a>
+            <a href="https://store.steampowered.com" target="_blank">
+                <img src="{% static 'GenZfy/images/Steam_icon_logo.svg.png' %}" alt="Steam">
+            </a>
+            <a href="https://www.playstation.com" target="_blank">
+                <img src="{% static 'GenZfy/images/ps.avif' %}" alt="PlayStation">
+            </a>
+        </div>
+
+
+
+        <footer class="new_footer_area bg_color">
+            <div class="new_footer_top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6">
+                            <div class="f_widget company_widget wow fadeInLeft" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInLeft;">
+                           
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="col-lg-3 col-md-6">
+                            <div class="f_widget social-widget pl_70 wow fadeInLeft" data-wow-delay="0.8s" style="visibility: visible; animation-delay: 0.8s; animation-name: fadeInLeft;">
+                                <h3 class="f-title f_600 t_color f_size_18" style="color: aliceblue;text-align: center;">Contact Team on Linkedin</h3>
+                                <div class="f_social_icon"style="text-align:center;">
+                                    <a href="https://www.linkedin.com/in/devansh-verma-918a99324/" class="fab fa-linkedin"></a>
+                       
+                                    <a href="https://www.linkedin.com/in/avinavs/" class="fab fa-linkedin"></a>
+                            
+                                    <a href="https://www.linkedin.com/in/diljot-singh-294bba338/" class="fab fa-linkedin"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer_bg">
+                    <div class="footer_bg_one"></div>
+                    <div class="footer_bg_two"></div>
+                </div>
+            </div>
+            <div class="footer_bottom">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6 col-sm-7">
+                            <h3><p class="mb-0 f_400"style="text-align:center;color:aliceblue">© GenZfy Inc.. 2024 All rights reserved.</p></h3>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </footer>
+</body>
+<script>
+    function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+  }
+  
+  // Close the dropdown if the user clicks outside of it
+  window.onclick = function(e) {
+    if (!e.target.matches('.dropbtn')) {
+    var myDropdown = document.getElementById("myDropdown");
+      if (myDropdown.classList.contains('show')) {
+        myDropdown.classList.remove('show');
+      }
+    }
+}
+// Building features carousel functionality
+const featureItems = document.querySelectorAll('.feature-item');
+                        const featureImage = document.getElementById('feature-image');
+                        const nextFeature = document.getElementById('next-feature');
+                        const prevFeature = document.getElementById('prev-feature');
+                        
+                        // Feature data with images and corresponding feature IDs
+                        const featureData = [
+        { id: 'feature-fitness', image: "{% static 'GenZfy/images/fortnite.jpg' %}" },
+        { id: 'feature-dog-park', image: "{% static 'GenZfy/images/gta5.jpg' %}" },
+        { id: 'feature-gated', image: "{% static 'GenZfy/images/rl4.jpg' %}" },
+        { id: 'feature-fire-pit', image: "{% static 'GenZfy/images/pubg3.jpg' %}" },
+        { id: 'feature-luxer', image: "{% static 'GenZfy/images/gt.jpg' %}" }
+    ];
+                        
+                        let currentFeatureIndex = 0;
+                        
+                        // Initialize the first feature
+                        featureImage.style.backgroundImage = `url(${featureData[currentFeatureIndex].image})`;
+                        
+                        // Function to show a specific feature
+                        function showFeature(index) {
+                            // Hide all features
+                            featureItems.forEach(item => {
+                                item.classList.remove('active');
+                            });
+                            
+                            // Show the selected feature
+                            document.getElementById(featureData[index].id).classList.add('active');
+                            
+                            // Change the image with fade effect
+                            featureImage.style.opacity = '0';
+                            setTimeout(() => {
+                                featureImage.style.backgroundImage = `url(${featureData[index].image})`;
+                                featureImage.style.opacity = '1';
+                            }, 300);
+                        }
+                        
+                        // Next feature button
+                        nextFeature.addEventListener('click', function() {
+                            currentFeatureIndex = (currentFeatureIndex + 1) % featureData.length;
+                            showFeature(currentFeatureIndex);
+                        });
+                        
+                        // Previous feature button
+                        prevFeature.addEventListener('click', function() {
+                            currentFeatureIndex = (currentFeatureIndex - 1 + featureData.length) % featureData.length;
+                            showFeature(currentFeatureIndex);
+                        });
+                        
+                        // Auto-rotate features every 5 seconds
+                        setInterval(() => {
+                            currentFeatureIndex = (currentFeatureIndex + 1) % featureData.length;
+                            showFeature(currentFeatureIndex);
+                        }, 8000);
+                        
+                        // Add scroll animation for sections
+                        const sections = document.querySelectorAll('section');
+                        const observer = new IntersectionObserver((entries) => {
+                            entries.forEach(entry => {
+                                if (entry.isIntersecting) {
+                                    entry.target.style.opacity = '1';
+                                    entry.target.style.transform = 'translateY(0)';
+                                }
+                            });
+                        }, { threshold: 0.1 });
+                        
+                        sections.forEach(section => {
+                            section.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                            section.style.opacity = '0';
+                            section.style.transform = 'translateY(20px)';
+                            observer.observe(section);
+                        });
+  </script>
+  <script src="{% static 'GenZfy/js/navbar.js' %}"></script>
+</html>

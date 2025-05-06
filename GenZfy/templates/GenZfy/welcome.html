@@ -1,0 +1,193 @@
+{% load static %}
+<html>
+<head>
+    <title>GenZfy</title>
+    <link rel="stylesheet" href="{% static 'GenZfy/css/stylewelcome.css' %}">
+    <link rel="stylesheet" href="{% static 'GenZfy/css/stylescroll.css' %}">
+    <link rel="icon" type="image/png" href="{% static 'GenZfy/images/favicon-removebg.png' %}">
+    <link rel="stylesheet" href="{% static 'GenZfy/css/navbar.css' %}">
+
+</head>
+
+<body>
+<div class="conatiner">
+    <div class="navbar">
+            <img src="{% static 'GenZfy/images/favicon-removebg.png' %}" class="logo">
+        <ul>
+            <li><a href="{% url 'welcome' %}"> HOME </a></li>
+            <li><a href="{% url 'artists' %}">ARTISTS</a></li>
+            <li><a href="{% url 'playlist' %}"> PLAYLIST </a></li>    
+            <li><a href="{% url 'contact' %}"> CONTACT US </a></li>    
+            <li>{% if request.session.user_id %}
+              <div class="dropdown">
+                <button class="dropbtn" onclick="toggleUserDropdown()">
+                  <img src="{% static 'GenZfy/images/icon.png' %}" alt="User Icon" class="user-icon">
+                </button>
+                <div class="dropdown-content" id="userDropdown">
+                  <div class="welcome-message">
+                    <p>Welcome,</p>
+                    <p class="dropdown-username">{{ request.session.username }}</p>
+                  </div>
+                  <a href="{% url 'logout' %}" style="text-align: center;">Logout</a>
+                </div>
+              </div>
+              {% else %}
+              <a href="{% url 'login' %}">LOGIN</a>
+              {% endif %}
+            </li>
+          </ul>
+        </div>
+        {% if messages %}
+  <div class="messages-container">
+    {% for message in messages %}
+    <div class="alert {% if message.tags %}alert-{{ message.tags }}{% endif %}">
+      {{ message }}
+      <span class="close-btn" onclick="this.parentElement.style.display='none';">&times;</span>
+    </div>
+    {% endfor %}
+  </div>
+  {% endif %}
+  <section class="hero">
+    <div class="stars" id="stars"></div>
+    <div class="hero-content">
+        <h1 class="hero-headline">GENZFY</h1>
+         <br><br><br>
+         
+        <p class="hero-subtitle">It's not only about listening,<br> it's about experiencing.<br> Join the revolution of sound with us.</p><br>
+        <div class="cta-buttons">
+            <a href="{% url 'artists' %}" class="btn btn-primary"><i class="fas fa-play"></i> Start Listening</a>
+            <a href="{% url 'gamersden'%}" class="btn btn-primary"><i class="fas fa-gamepad"></i> Discover Games</a>
+        </div>
+    </div>
+    <img src="{% static 'GenZfy/images/freepik__the-style-is-candid-image-photography-with-natural__22032.png' %}" alt="Headphones" class="floating-headphones">
+  </section>
+  <br>
+  <br>
+  <br>
+  
+  
+  <h1 style="text-align: center;font-size: 40px;font-weight: bold;opacity: 0; transform: translateY(50px);
+              transition: opacity 1s ease-out, transform 1s ease-out; opacity: 1;
+              transform: translateY(0);">
+              <span class = "neongen">TOP ARTISTS
+              </span>
+          </h1>
+  <br>
+  <br>
+  
+  <div class="conatiner1" style="background-color: black; transition: max-width 1.4s linear;">
+      <div class="moxybaul"><div class="nameboxm"><div class="nmox1">KARAN</div><div class="nmox2">AUJLA</div></div><div class="box-dmox"><div class="datosmox"><div class="moxgif"></div><div class="moxquo">Haaye ni tainu diary'an hi de doon
+          Beh ke folli varke
+          Lai javin gyan biba kole khadd ke
+          Kaliyan di knowledge batheri jatt nu
+          Ni halle likhda ni gaane main kitaban padh ke.</div>
+      <div class="dmox"><m>Full name</m><n>Jaskaran Singh Aujla</n></div><div class="dmox"><m>alias</m>
+          <n>Aujla</n></div><div class="dmox"><m>Age</m><n>27</n></div>
+          <div class="dmox"><m>Origin</m><n>India</n></div><div class="dmox"><m>Profession</m><n>Singer</n>
+          </div><div class="dmox"><m>Specialty</m><n>Bars</n></div></div><div class="musicmox"><div class="mmox"><i class="far fa-waveform"></i><a href="{% url 'artists' %}">Winning Speech</a></div><div class="mmox"><i class="far fa-waveform"></i><a href="{% url 'artists' %}">On Top</a></div><div class="mmox"><i class="far fa-waveform"></i><a href="{% url 'artists' %}">Sifar Safar</a></div>
+      
+      <link rel="preconnect" href="https://fonts.googleapis.com"> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;700&display=swap" rel="stylesheet"><link href="https://kit-pro.fontawesome.com/releases/v5.13.0/css/pro.min.css" rel="stylesheet"/>
+      
+  
+  </div>
+  <br>
+  </div>
+  </div>
+  </div>
+  <div class="conatiner1" style="background-color: black; transition: max-width 1.4s linear;">
+      <div class="moxybaul1"><div class="nameboxm1"><div class="nmox3">ARIJIT</div><div class="nmox4">SINGH</div></div><div class="box-dmox1"><div class="datosmox1"><div class="moxgif1"></div><div class="moxquo1">Hum tere bin ab reh nahi sakte
+          Tere bina kya wajood mera
+          Tujhse juda gar ho jaayenge
+          Toh khud se hi ho jaayenge judaa
+          Kyunki tum hi ho
+          Ab tum hi ho
+          Zindagi ab tum hi ho
+          .</div>
+      <div class="dmox1"><m>Full name</m><n>ARIJIT SINGH</n></div><div class="dmox1"><m>alias</m>
+          <n>ARIJIT</n></div><div class="dmox1"><m>Age</m><n>37</n></div>
+          <div class="dmox1"><m>Origin</m><n>India</n></div><div class="dmox1"><m>Profession</m><n>Singer</n>
+          </div><div class="dmox1"><m>Specialty</m><n>Romantic songs</n></div></div><div class="musicmox1"><div class="mmox1"><i class="far fa-waveform"></i><a href="{% url 'artists' %}">Phir Bhi Tumko Chahunga</a></div><div class="mmox1"><i class="far fa-waveform"></i><a href="{% url 'artists' %}">Channa Mereya</a></div><div class="mmox1"><i class="far fa-waveform"></i><a href="{% url 'artists' %}">Ae Dil Hai Mushkil</a>
+          </div>
+      
+      <link rel="preconnect" href="https://fonts.googleapis.com"> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;700&display=swap" rel="stylesheet"><link href="https://kit-pro.fontawesome.com/releases/v5.13.0/css/pro.min.css" rel="stylesheet"/>
+      
+  
+  </div>
+  <br>
+  </div>
+  </div>
+  </div>
+  
+  <div class="conatiner1" style="background-color: black; transition: max-width 1.4s linear;">
+      <div class="moxybaul2"><div class="nameboxm2"><div class="nmox5">DRAKE</div><div class="nmox6">GRAHAM</div></div><div class="box-dmox2"><div class="datosmox2"><div class="moxgif2"></div><div class="moxquo2">God's plan, God's plan
+          I hold back, sometimes I won't, yeah
+          I feel good, sometimes I don't (Ayy, don't)
+          I finessed down Weston Road (Ayy, 'nessed)
+          Might go down a G-O-D (Yeah, wait)
+          
+          .</div>
+      <div class="dmox2"><m>Full name</m><n>Aubrey Drake Graham</n></div><div class="dmox2"><m>alias</m>
+          <n>DRAKE</n></div><div class="dmox2"><m>Age</m><n>38</n></div>
+          <div class="dmox2"><m>Origin</m><n>Canadian</n></div><div class="dmox2"><m>Profession</m><n>Singer</n>
+          </div><div class="dmox2"><m>Specialty</m><n>Rapper </n></div></div><div class="musicmox2"><div class="mmox2"><i class="far fa-waveform"></i><a href="{% url 'artists' %}">God's Plan</a></div><div class="mmox2"><i class="far fa-waveform"></i><a href="{% url 'artists' %}">Laugh Now Cry Later</a></div><div class="mmox2"><i class="far fa-waveform"></i><a href="{% url 'artists' %}">First Person Shooter</a>
+          </div>
+      
+      <link rel="preconnect" href="https://fonts.googleapis.com"> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;700&display=swap" rel="stylesheet"><link href="https://kit-pro.fontawesome.com/releases/v5.13.0/css/pro.min.css" rel="stylesheet"/>
+      
+  
+  </div>
+  <br>
+  </div>
+  </div>
+  </div>
+  
+  
+    
+  
+  
+  
+  <footer class="new_footer_area bg_color">
+      <div class="new_footer_top">
+          <div class="container">
+              <div class="row">
+                  <div class="col-lg-3 col-md-6">
+                      <div class="f_widget company_widget wow fadeInLeft" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInLeft;">
+                     
+                      </div>
+                  </div>
+                  
+                  
+                  <div class="col-lg-3 col-md-6">
+                      <div class="f_widget social-widget pl_70 wow fadeInLeft" data-wow-delay="0.8s" style="visibility: visible; animation-delay: 0.8s; animation-name: fadeInLeft;">
+                          <h3 class="f-title f_600 t_color f_size_18" style="color: aliceblue;text-align: center;">Contact Team on Linkedin</h3>
+                          <div class="f_social_icon"style="text-align:center;">
+                              <a href="https://www.linkedin.com/in/devansh-verma-918a99324/" class="fab fa-linkedin"></a>
+                 
+                              <a href="https://www.linkedin.com/in/avinavs/" class="fab fa-linkedin"></a>
+                      
+                              <a href="https://www.linkedin.com/in/diljot-singh-294bba338/" class="fab fa-linkedin"></a>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="footer_bg">
+              <div class="footer_bg_one"></div>
+              <div class="footer_bg_two"></div>
+          </div>
+      </div>
+      <div class="footer_bottom">
+          <div class="container">
+              <div class="row align-items-center">
+                  <div class="col-lg-6 col-sm-7">
+                      <h3><p class="mb-0 f_400"style="text-align:center;color:aliceblue">© GenZfy Inc.. 2024 All rights reserved.</p></h3>
+                  </div>
+                  
+              </div>
+          </div>
+      </div>
+  </footer>
+<script src ="{% static 'GenZfy/js/scroptwelcome.js' %}"></script>
+
+</body>
+</html>
