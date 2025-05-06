@@ -684,10 +684,25 @@ input.filled ~ label {
             <li><a href="{% url 'artists' %}">ARTISTS</a></li>
             <li><a href="{% url 'playlist' %}"> PLAYLIST </a></li>    
             <li><a href="{% url 'contact' %}"> CONTACT US </a></li>    
+            <li>{% if request.session.user_id %}
               <div class="dropdown">
                 <button class="dropbtn" onclick="toggleUserDropdown()">
                   <img src="{% static 'GenZfy/images/icon.png' %}" alt="User Icon" class="user-icon">
                 </button>
+                <div class="dropdown-content" id="userDropdown">
+                  <div class="welcome-message">
+                    <p>Welcome,</p>
+                    <p class="dropdown-username">{{ request.session.username }}</p>
+                  </div>
+                  <a href="{% url 'logout' %}" style="text-align: center;">Logout</a>
+                </div>
+              </div>
+              {% else %}
+              <a href="{% url 'login' %}">LOGIN</a>
+              {% endif %}
+            </li>
+          </ul>
+          </div>
 
           <div class="header fade-in">
             <h1>My Gen<span class="gldgen">Zf</span>y Pla<span class="gldgen">y</span>list</h1>
