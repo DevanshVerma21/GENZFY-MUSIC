@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.contrib import messages
+from .models import User,UserHistory
 def welcome(request):
     return render(request, 'GenZfy/welcome.html')
 def playlist(request):
