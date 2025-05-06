@@ -8,9 +8,10 @@ project:
 environment:
   python_version: "3.9"
   dependencies:
-    - django>=3.2
+    - django>=5.2
     - djangorestframework
     - whitenoise
+    - gunicorn
 
 settings:
   debug: false
