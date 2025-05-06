@@ -21,3 +21,19 @@
 ```bash
 git clone https://github.com/DevanshVerma21/GENZFY-MUSIC.git
 cd GENZFY-MUSIC
+Create a Virtual Environment (optional)
+bash
+Copy
+Edit
+python -m venv venv
+source venv/bin/activate  # Windows: venv\Scripts\activate
+Install Dependencies
+bash
+Copy
+Edit
+pip install -r requirement.txt
+Run the Server
+bash
+Copy
+Edit
+python manage.py runserver
